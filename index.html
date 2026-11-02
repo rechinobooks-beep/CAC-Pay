@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="CACP — protótipo beta de gestão de mensalidades do Colégio Adventista da Chamba.">
+<title>CACP | Gestão Escolar</title>
+<style>
+:root{--navy:#183653;--navy2:#244967;--ink:#1e293b;--muted:#64748b;--line:#e2e8f0;--bg:#f5f7fa;--white:#fff;--green:#16845b;--amber:#a16207;--red:#b42318}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.layout{min-height:100vh;display:grid;grid-template-columns:245px 1fr}.sidebar{background:var(--navy);color:#fff;padding:24px 16px;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:12px;padding:0 8px 28px;border-bottom:1px solid #ffffff24}.brand-mark{width:42px;height:42px;border:1px solid #ffffff65;border-radius:8px;display:grid;place-items:center;font-weight:800;font-size:16px}.brand strong{display:block;font-size:17px;letter-spacing:.5px}.brand small{color:#c6d4e0;font-size:11px}.nav-label{font-size:10px;letter-spacing:1.3px;color:#b8c8d6;margin:26px 10px 9px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#dce6ee;text-align:left;padding:11px 12px;border-radius:6px;display:flex;gap:11px;align-items:center}.nav button.active,.nav button:hover{background:#ffffff19;color:#fff}.nav .ico{width:18px;text-align:center}.side-note{margin-top:auto;padding:14px 10px 0;color:#c6d4e0;font-size:11px;border-top:1px solid #ffffff24}.main{min-width:0}.topbar{height:70px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px}.crumb{color:var(--muted);font-size:13px}.user{display:flex;align-items:center;gap:10px;font-size:13px}.avatar{width:34px;height:34px;border-radius:50%;background:#e7edf3;color:var(--navy);display:grid;place-items:center;font-weight:700}.content{max-width:1320px;margin:auto;padding:30px 32px 48px}.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:24px}.eyebrow{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;font-weight:700}.page-head h1{margin:4px 0;font-size:25px;letter-spacing:-.5px}.page-head p{margin:0;color:var(--muted)}.beta{background:#eef3f7;color:var(--navy);padding:5px 9px;border-radius:4px;font-size:11px;font-weight:700}.grid{display:grid;gap:16px}.stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:20px}.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px}.stat-top{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.stat-icon{width:30px;height:30px;border-radius:6px;background:#eef3f7;color:var(--navy);display:grid;place-items:center}.stat-value{font-size:26px;font-weight:700;margin-top:10px;letter-spacing:-.5px}.stat-foot{font-size:11px;color:var(--muted);margin-top:2px}.cols{grid-template-columns:1.45fr 1fr}.card h2{font-size:15px;margin:0 0 4px}.sub{color:var(--muted);font-size:12px;margin-bottom:16px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th{text-align:left;font-size:10px;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);font-weight:700;padding:11px 10px;border-bottom:1px solid var(--line)}td{padding:12px 10px;border-bottom:1px solid #edf0f3;font-size:12px}tbody tr:last-child td{border-bottom:0}.status{display:inline-flex;padding:4px 8px;border-radius:20px;font-size:10px;font-weight:700}.paid{background:#e8f5ef;color:var(--green)}.pending{background:#fff4df;color:var(--amber)}.neutral{background:#eef2f6;color:#475569}.btn{border:1px solid var(--line);background:#fff;color:var(--ink);padding:9px 13px;border-radius:5px;font-weight:600;font-size:12px}.btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}.btn:hover{filter:brightness(.97)}.btn.small{padding:6px 9px;font-size:11px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}.field{display:grid;gap:5px}.field label{font-size:11px;color:#475569;font-weight:700}.field input,.field select{height:39px;border:1px solid #cfd8e3;border-radius:5px;padding:0 10px;background:#fff;color:var(--ink);min-width:0}.search{min-width:230px;flex:1}.section{display:none}.section.active{display:block}.notice{padding:12px 14px;background:#f0f5f9;border-left:3px solid #6b879f;border-radius:3px;color:#40566a;font-size:12px;margin-bottom:18px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.form-actions{display:flex;gap:9px;margin-top:18px}.empty{padding:25px;text-align:center;color:var(--muted)}.receipt{max-width:650px;margin:auto;border:1px solid var(--line);padding:28px;background:white}.receipt-head{display:flex;justify-content:space-between;border-bottom:2px solid var(--navy);padding-bottom:15px;margin-bottom:20px}.receipt h2{margin:0;color:var(--navy)}.receipt-row{display:flex;justify-content:space-between;gap:15px;padding:9px 0;border-bottom:1px solid var(--line)}.receipt-total{font-size:22px;font-weight:800;color:var(--navy)}.muted{color:var(--muted)}.footer{padding:20px 0;color:var(--muted);font-size:11px;text-align:center}.mobile-menu{display:none}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{padding:12px 14px}.brand{padding:0 4px 12px}.nav-label,.side-note{display:none}.nav{display:flex;overflow:auto;margin-top:10px}.nav button{white-space:nowrap;padding:9px}.topbar{height:54px;padding:0 18px}.content{padding:22px 18px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.cols{grid-template-columns:1fr}}
+@media(max-width:520px){.page-head{display:block}.beta{display:inline-block;margin-top:10px}.stats{gap:9px}.card{padding:14px}.stat-value{font-size:22px}.form-grid{grid-template-columns:1fr}.content{padding:18px 12px}.topbar{padding:0 12px}}
+@media print{body{background:#fff}.sidebar,.topbar,.page-head,.no-print,.footer{display:none!important}.layout{display:block}.content{padding:0}.section{display:none!important}#receipts.section.active{display:block!important}.receipt{border:0;max-width:none}}
+</style></head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+ <div class="brand"><div class="brand-mark">CAC</div><div><strong>CACP</strong><small>Gestão escolar</small></div></div>
+ <div class="nav-label">MENU PRINCIPAL</div>
+ <nav class="nav" aria-label="Navegação principal">
+  <button class="active" data-page="dashboard"><span class="ico">▦</span>Visão geral</button>
+  <button data-page="students"><span class="ico">♙</span>Alunos</button>
+  <button data-page="payments"><span class="ico">▤</span>Mensalidades</button>
+  <button data-page="receipts"><span class="ico">▧</span>Recibos</button>
+  <button data-page="settings"><span class="ico">⚙</span>Configurações</button>
+ </nav>
+ <div class="side-note">Colégio Adventista da Chamba<br>Protótipo demonstrativo · Beta 0.1</div>
+</aside>
+<main class="main">
+ <header class="topbar"><div class="crumb">Colégio Adventista da Chamba <span class="muted">/</span> <span id="crumb">Visão geral</span></div><div class="user"><div class="avatar">AD</div><div><strong>Administrador</strong><br><span class="muted">Conta de demonstração</span></div></div></header>
+ <div class="content">
+  <section id="dashboard" class="section active">
+   <div class="page-head"><div><div class="eyebrow">Painel administrativo</div><h1>Visão geral</h1><p>Resumo demonstrativo da situação financeira e escolar.</p></div><span class="beta">BETA 0.1 · DEMO</span></div>
+   <div class="notice"><strong>Ambiente de demonstração:</strong> os alunos e pagamentos apresentados são fictícios. Nenhum pagamento bancário real é processado.</div>
+   <div class="grid stats">
+    <div class="card"><div class="stat-top"><span>Alunos registados</span><span class="stat-icon">♙</span></div><div class="stat-value" id="totalStudents">7</div><div class="stat-foot">Registos de demonstração</div></div>
+    <div class="card"><div class="stat-top"><span>Mensalidades pagas</span><span class="stat-icon">✓</span></div><div class="stat-value" id="paidCount">3</div><div class="stat-foot">Neste cenário demonstrativo</div></div>
+    <div class="card"><div class="stat-top"><span>Mensalidades pendentes</span><span class="stat-icon">◷</span></div><div class="stat-value" id="pendingCount">4</div><div class="stat-foot">Aguardam regularização</div></div>
+    <div class="card"><div class="stat-top"><span>Valor recebido</span><span class="stat-icon">MT</span></div><div class="stat-value" id="receivedValue">4.500 MT</div><div class="stat-foot">Valores exclusivamente fictícios</div></div>
+   </div>
+   <div class="grid cols">
+    <div class="card"><h2>Pagamentos recentes</h2><div class="sub">Últimos movimentos de demonstração</div><div class="table-wrap"><table><thead><tr><th>Aluno</th><th>Mês</th><th>Valor</th><th>Estado</th></tr></thead><tbody id="recentRows"></tbody></table></div></div>
+    <div class="card"><h2>Acesso rápido</h2><div class="sub">Operações frequentes da secretaria</div><div style="display:grid;gap:10px"><button class="btn" data-goto="students">Consultar alunos</button><button class="btn" data-goto="payments">Registar pagamento de teste</button><button class="btn" data-goto="receipts">Consultar recibos</button></div><div class="notice" style="margin:18px 0 0">Os recibos gerados nesta versão estão marcados como demonstração e não substituem documentos oficiais.</div></div>
+   </div>
+  </section>
+  <section id="students" class="section">
+   <div class="page-head"><div><div class="eyebrow">Registo escolar</div><h1>Alunos</h1><p>Consulta dos registos fictícios da 11.ª classe.</p></div><span class="beta">7 REGISTOS DEMO</span></div>
+   <div class="notice">Os nomes abaixo são identificadores fictícios. Substitua-os apenas por dados autorizados da escola num ambiente privado e protegido.</div>
+   <div class="card"><div class="toolbar"><div class="field search"><label for="studentSearch">Pesquisar aluno</label><input id="studentSearch" placeholder="Nome, número ou área..."></div><div class="field"><label for="areaFilter">Filtrar área</label><select id="areaFilter"><option value="">Todas as áreas</option><option>A</option><option>B</option><option>C</option></select></div></div>
+    <div class="table-wrap"><table><thead><tr><th>N.º</th><th>Nome do aluno (demo)</th><th>Classe</th><th>Área</th><th>Situação</th></tr></thead><tbody id="studentRows"></tbody></table></div>
+   </div>
+  </section>
+  <section id="payments" class="section">
+   <div class="page-head"><div><div class="eyebrow">Gestão financeira</div><h1>Mensalidades</h1><p>Consulta e registo de pagamentos de demonstração.</p></div><span class="beta">MODO SIMULAÇÃO</span></div>
+   <div class="notice"><strong>Sem integração bancária:</strong> esta ação apenas simula o registo interno. Cartões e transferências reais exigirão integração e validação com um fornecedor autorizado e a escola.</div>
+   <div class="grid cols">
+    <div class="card"><h2>Registar pagamento de teste</h2><div class="sub">Preencha os dados para simular uma liquidação.</div>
+     <form id="paymentForm"><div class="form-grid">
+      <div class="field" style="grid-column:1/-1"><label for="payStudent">Aluno</label><select id="payStudent" required></select></div>
+      <div class="field"><label for="payMonth">Mês</label><select id="payMonth"><option>Janeiro</option><option>Fevereiro</option><option>Março</option><option>Abril</option><option>Maio</option><option>Junho</option><option>Julho</option><option>Agosto</option><option>Setembro</option><option>Outubro</option><option>Novembro</option><option>Dezembro</option></select></div>
+      <div class="field"><label for="payYear">Ano letivo</label><select id="payYear"><option>2026</option><option>2027</option></select></div>
+      <div class="field"><label for="payAmount">Valor (MT)</label><input id="payAmount" type="number" min="1" value="1500" required></div>
+      <div class="field"><label for="payMethod">Método</label><select id="payMethod"><option>Transferência bancária (simulada)</option><option>Cartão bancário (simulado)</option></select></div>
+     </div><div class="form-actions"><button class="btn primary" type="submit">Simular confirmação</button><button class="btn" type="reset">Limpar</button></div></form>
+    </div>
+    <div class="card"><h2>Histórico de mensalidades</h2><div class="sub">Movimentos registados nesta sessão</div><div class="table-wrap"><table><thead><tr><th>Referência</th><th>Aluno</th><th>Mês</th><th>Estado</th></tr></thead><tbody id="paymentRows"></tbody></table></div></div>
+   </div>
+  </section>
+  <section id="receipts" class="section">
+   <div class="page-head no-print"><div><div class="eyebrow">Comprovativos</div><h1>Recibos</h1><p>Consulte e imprima recibos gerados na demonstração.</p></div><span class="beta">DOCUMENTOS DEMO</span></div>
+   <div class="notice no-print">Os recibos abaixo não são documentos fiscais nem comprovativos de recebimento bancário. São apenas modelos de interface.</div>
+   <div class="card no-print" style="margin-bottom:16px"><div class="field"><label for="receiptSelect">Selecionar recibo</label><select id="receiptSelect"></select></div></div>
+   <div id="receiptPaper" class="receipt"><div class="empty">Ainda não existe recibo selecionado.</div></div>
+   <div class="form-actions no-print" style="justify-content:center"><button class="btn primary" id="printReceipt">Imprimir / Guardar PDF</button></div>
+  </section>
+  <section id="settings" class="section">
+   <div class="page-head"><div><div class="eyebrow">Sistema</div><h1>Configurações</h1><p>Informações gerais e limites desta versão.</p></div><span class="beta">BETA 0.1</span></div>
+   <div class="card" style="max-width:760px"><h2>Identificação institucional</h2><div class="sub">Dados de apresentação do protótipo.</div><div class="receipt-row"><span class="muted">Nome do sistema</span><strong>CACP</strong></div><div class="receipt-row"><span class="muted">Instituição de referência</span><strong>Colégio Adventista da Chamba</strong></div><div class="receipt-row"><span class="muted">Versão</span><strong>0.1 Beta</strong></div><div class="receipt-row"><span class="muted">Idioma</span><strong>Português</strong></div><div class="receipt-row"><span class="muted">Moeda de demonstração</span><strong>Metical (MT)</strong></div><div class="receipt-row"><span class="muted">Pagamentos reais</span><strong>Não disponíveis</strong></div><div class="receipt-row"><span class="muted">Base de dados</span><strong>Dados locais fictícios</strong></div><div class="notice" style="margin-top:18px">Esta versão não possui autenticação real, servidor, base de dados central, integração bancária ou envio automático de mensagens. Esses componentes serão necessários antes de qualquer utilização oficial.</div></div>
+  </section>
+  <div class="footer">CACP · Colégio Adventista da Chamba · Protótipo beta 0.1 · Dados fictícios</div>
+ </div>
+</main>
+</div>
+<script>
+const students=[
+ {id:"D-070",name:"Aluno Demonstração 01",number:70,grade:"11.ª",area:"B"},
+ {id:"D-035",name:"Aluno Demonstração 02",number:35,grade:"11.ª",area:"C"},
+ {id:"D-034",name:"Aluno Demonstração 03",number:34,grade:"11.ª",area:"C"},
+ {id:"D-050",name:"Aluno Demonstração 04",number:50,grade:"11.ª",area:"B"},
+ {id:"D-001",name:"Aluno Demonstração 05",number:1,grade:"11.ª",area:"B"},
+ {id:"D-010",name:"Aluno Demonstração 06",number:10,grade:"11.ª",area:"B"},
+ {id:"D-015",name:"Aluno Demonstração 07",number:15,grade:"11.ª",area:"A"}
+];
+let payments=[
+ {ref:"DEMO-0001",student:"D-070",month:"Janeiro",year:"2026",amount:1500,method:"Transferência (demo)",status:"Pago",date:"02/01/2026"},
+ {ref:"DEMO-0002",student:"D-035",month:"Janeiro",year:"2026",amount:1500,method:"Cartão (demo)",status:"Pago",date:"04/01/2026"},
+ {ref:"DEMO-0003",student:"D-034",month:"Janeiro",year:"2026",amount:1500,method:"Transferência (demo)",status:"Pago",date:"05/01/2026"}
+];
+const $=s=>document.querySelector(s);const money=n=>new Intl.NumberFormat("pt-MZ").format(n)+" MT";
+function studentById(id){return students.find(s=>s.id===id)}
+function go(page){document.querySelectorAll(".section").forEach(x=>x.classList.toggle("active",x.id===page));document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===page));$("#crumb").textContent=({dashboard:"Visão geral",students:"Alunos",payments:"Mensalidades",receipts:"Recibos",settings:"Configurações"})[page];if(page==="receipts")renderReceiptSelect();window.scrollTo(0,0)}
+document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.page)));document.querySelectorAll("[data-goto]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.goto)));
+function renderStudents(){const q=$("#studentSearch").value.toLowerCase(),a=$("#areaFilter").value;const list=students.filter(s=>(!a||s.area===a)&&[s.name,s.number,s.area,s.id].join(" ").toLowerCase().includes(q));$("#studentRows").innerHTML=list.map(s=>`<tr><td>${s.number}</td><td><strong>${s.name}</strong><br><span class="muted">${s.id}</span></td><td>${s.grade}</td><td>${s.area}</td><td><span class="status neutral">Registo demo</span></td></tr>`).join("")||'<tr><td colspan="5" class="empty">Nenhum aluno encontrado.</td></tr>'}
+function renderStudentOptions(){ $("#payStudent").innerHTML=students.map(s=>`<option value="${s.id}">${s.name} — N.º ${s.number} / Área ${s.area}</option>`).join("")}
+function renderPaymentRows(){const paid=payments.filter(p=>p.status==="Pago");$("#paymentRows").innerHTML=payments.slice().reverse().map(p=>{const s=studentById(p.student);return `<tr><td>${p.ref}</td><td>${s.name}</td><td>${p.month}/${p.year}</td><td><span class="status paid">Pago · demo</span></td></tr>`}).join("");$("#recentRows").innerHTML=payments.slice(-5).reverse().map(p=>{const s=studentById(p.student);return `<tr><td>${s.name}</td><td>${p.month}</td><td>${money(p.amount)}</td><td><span class="status paid">Pago · demo</span></td></tr>`}).join("");$("#totalStudents").textContent=students.length;$("#paidCount").textContent=paid.length;$("#pendingCount").textContent=Math.max(students.length-paid.length,0);$("#receivedValue").textContent=money(paid.reduce((n,p)=>n+p.amount,0))}
+function renderReceiptSelect(){const sel=$("#receiptSelect"),old=sel.value;sel.innerHTML=payments.filter(p=>p.status==="Pago").map(p=>`<option value="${p.ref}">${p.ref} — ${studentById(p.student).name}</option>`).join("");if(old&&payments.some(p=>p.ref===old))sel.value=old;renderReceipt()}
+function renderReceipt(){const p=payments.find(x=>x.ref===$("#receiptSelect").value);if(!p){$("#receiptPaper").innerHTML='<div class="empty">Nenhum recibo disponível.</div>';return}const s=studentById(p.student);$("#receiptPaper").innerHTML=`<div class="receipt-head"><div><div class="eyebrow">Colégio Adventista da Chamba</div><h2>CACP</h2><div class="muted">Comprovativo de demonstração</div></div><div style="text-align:right"><strong>RECIBO</strong><br><span class="muted">${p.ref}</span></div></div><div class="notice"><strong>DOCUMENTO FICTÍCIO — NÃO VÁLIDO PARA PAGAMENTO REAL</strong></div><div class="receipt-row"><span class="muted">Aluno</span><strong>${s.name}</strong></div><div class="receipt-row"><span class="muted">Número de aluno (demo)</span><strong>${s.number}</strong></div><div class="receipt-row"><span class="muted">Classe / Área</span><strong>${s.grade} / ${s.area}</strong></div><div class="receipt-row"><span class="muted">Referência</span><strong>${p.ref}</strong></div><div class="receipt-row"><span class="muted">Mensalidade</span><strong>${p.month} de ${p.year}</strong></div><div class="receipt-row"><span class="muted">Método</span><strong>${p.method}</strong></div><div class="receipt-row"><span class="muted">Data de registo</span><strong>${p.date}</strong></div><div class="receipt-row" style="margin-top:12px"><span class="muted">Valor demonstrativo</span><span class="receipt-total">${money(p.amount)}</span></div><p class="muted" style="font-size:11px;margin-top:24px">Este comprovativo foi gerado num protótipo de software. Não confirma a entrada de fundos numa conta bancária e não substitui um recibo oficial emitido pela instituição.</p>`}
+$("#studentSearch").addEventListener("input",renderStudents);$("#areaFilter").addEventListener("change",renderStudents);$("#receiptSelect").addEventListener("change",renderReceipt);
+$("#paymentForm").addEventListener("submit",e=>{e.preventDefault();const id=$("#payStudent").value,month=$("#payMonth").value,year=$("#payYear").value,amount=Number($("#payAmount").value),method=$("#payMethod").value;if(!id||amount<=0)return;const duplicate=payments.some(p=>p.student===id&&p.month===month&&p.year===year);if(duplicate&&!confirm("Já existe um registo para este aluno e mês. Criar outro registo de demonstração?"))return;const ref="DEMO-"+String(payments.length+1).padStart(4,"0");payments.push({ref,student:id,month,year,amount,method,status:"Pago",date:new Date().toLocaleDateString("pt-PT")});renderPaymentRows();renderReceiptSelect();$("#receiptSelect").value=ref;renderReceipt();alert("Registo simulado criado. Nenhum dinheiro foi movimentado.");go("receipts")});
+$("#printReceipt").addEventListener("click",()=>window.print());
+renderStudents();renderStudentOptions();renderPaymentRows();renderReceiptSelect();
+</script></body></html>
