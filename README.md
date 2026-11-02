@@ -1,65 +1,66 @@
 # CACP — Colégio Adventista da Chamba Platform
 
-**Versão:** 0.1 Beta  
+**Versão:** 0.2 Beta  
 **Tipo:** Protótipo de apresentação  
 **Idioma:** Português  
 **Moeda demonstrativa:** Metical (MT)
 
 ## Objetivo
 
-O CACP é um protótipo de interface para apoiar a gestão de mensalidades do Colégio Adventista da Chamba. Esta versão permite demonstrar a organização de alunos, o registo simulado de pagamentos e a apresentação de recibos demonstrativos.
+O CACP é um protótipo de interface para demonstrar como a secretaria do Colégio Adventista da Chamba poderá acompanhar alunos, mensalidades, pagamentos e recibos.
 
 ## Como executar
 
 1. Abra `index.html` num navegador moderno.
-2. Navegue pelo menu lateral.
-3. Consulte os alunos de demonstração.
-4. Em **Mensalidades**, simule um registo.
-5. Em **Recibos**, escolha o comprovativo e use **Imprimir / Guardar PDF**.
+2. No ecrã inicial, entre com qualquer identificador de demonstração não vazio.
+3. Consulte os alunos e experimente adicionar um novo registo fictício.
+4. Em **Mensalidades**, escolha o mês e o ano para ver estados demonstrativos.
+5. Simule um pagamento e consulte o histórico.
+6. Em **Recibos**, selecione o comprovativo e use **Imprimir / Guardar PDF**.
 
 Não é necessário instalar dependências ou iniciar um servidor.
 
-## Dados de demonstração
+## Funcionalidades da Beta 0.2
 
-A interface contém sete registos inteiramente fictícios, todos na 11.ª classe, distribuídos pelas áreas A, B e C. Os números de aluno reproduzem apenas a estrutura solicitada para o teste, mas os nomes reais foram substituídos por identificadores genéricos para proteger a privacidade de estudantes.
-
-## Funcionalidades incluídas
-
-- Painel administrativo com indicadores demonstrativos.
+- Ecrã inicial de acesso demonstrativo.
+- Painel com indicadores de alunos e movimentos simulados.
 - Lista de alunos com pesquisa e filtro por área.
-- Formulário de registo simulado de mensalidades.
-- Histórico local de movimentos da sessão.
-- Geração visual de recibo demonstrativo.
-- Impressão do recibo ou gravação em PDF pelo navegador.
-- Layout adaptável a computador, tablet e telemóvel.
+- Formulário para adicionar alunos fictícios durante a sessão.
+- Consulta do estado das mensalidades por mês e ano.
+- Registo simulado de pagamento por transferência ou cartão.
+- Histórico de pagamentos com referência, valor e data.
+- Geração e impressão de recibos demonstrativos.
+- Interface adaptável a computador, tablet e telemóvel.
 
-## Limitações — não utilizar para cobranças reais
+## Dados e limitações
 
-Esta versão **não** é um sistema financeiro em produção. Não possui:
-- autenticação real ou gestão de permissões;
-- base de dados central ou cópias de segurança;
+A interface começa com sete registos inteiramente fictícios. Os dados criados durante a utilização existem apenas na memória da página e são perdidos ao atualizar ou fechar o navegador.
+
+**Esta versão não é um sistema financeiro em produção.** O ecrã de entrada não é autenticação: não valida palavra-passe nem protege o conteúdo. Também não possui:
+- backend, base de dados central ou cópias de segurança;
+- autenticação segura, sessões ou gestão de permissões;
 - integração com bancos, cartões ou gateways;
 - confirmação automática de transferências;
 - emissão fiscal ou recibos oficiais;
 - notificações por SMS, email ou WhatsApp;
-- auditoria financeira de produção.
+- auditoria financeira ou trilho de alterações de produção.
 
-Os botões de simulação apenas atualizam dados em memória no navegador. Os recibos estão explicitamente marcados como fictícios.
+Os pagamentos são apenas simulações locais. Nenhum dinheiro é movimentado. Os recibos são explicitamente identificados como fictícios e não confirmam recebimento bancário.
 
 ## Próximas etapas antes de um piloto real
 
-1. Obter autorização formal da direção do colégio para o projeto e uso do nome/identidade.
-2. Definir requisitos com a secretaria e a direção.
-3. Implementar autenticação segura e perfis (encarregado, secretaria, direção e administrador).
-4. Criar backend e base de dados protegida, com controlo de acesso por escola e por função.
+1. Obter autorização formal da direção para o projeto e uso do nome/identidade da escola.
+2. Definir requisitos com a direção, secretaria, encarregados e responsáveis técnicos.
+3. Implementar backend, base de dados protegida e autenticação segura.
+4. Definir perfis e permissões (encarregado, secretaria, direção e administrador).
 5. Integrar um fornecedor de pagamentos autorizado, após validação contratual e regulatória em Moçambique.
-6. Implementar conciliação bancária e confirmação de pagamentos por notificações assinadas do fornecedor.
+6. Implementar conciliação bancária e confirmação de pagamentos.
 7. Definir recibos oficiais com a escola e validar requisitos fiscais/contabilísticos.
 8. Realizar testes de segurança, privacidade, recuperação e acessibilidade.
 
 ## Privacidade
 
-Não inserir dados pessoais reais de alunos, encarregados ou funcionários neste repositório público. Para testes com dados reais, utilizar um ambiente privado, acesso restrito, autorização institucional e medidas adequadas de proteção de dados.
+Não inserir dados pessoais reais de alunos, encarregados ou funcionários neste repositório público. Para testes com dados reais, utilizar um ambiente privado, acesso restrito, autorização institucional e medidas adequadas de proteção de dados. Como os estudantes podem ser menores, os testes devem ser supervisionados pela escola e pelos adultos responsáveis.
 
 ---
-**CACP Beta 0.1 — protótipo não oficial, para discussão e demonstração.**
+**CACP Beta 0.2 — protótipo não oficial, para discussão e demonstração.**
